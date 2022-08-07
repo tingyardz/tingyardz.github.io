@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Scanner</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <style>
+        #qr-reader__camera_selection{
+            padding: 6px;
+            border: solid 1px gray;
+        }
+        div span button{
+            padding: 6px;
+            border: solid 1px gray;
+            background-color: rgb(0,100,255);
+            color: #ffffff
+        }
+        @media only screen and (max-width: 760px) {
+            #qr-reader__camera_selection{
+                padding: 6px;
+                border: solid 1px gray;
+                width: 100%;
+            }
+            div span button{
+                padding: 6px;
+                border: solid 1px gray;
+                width: 100%;
+                margin-top: 10px;
+                background-color: rgb(0,100,255);
+                color: #ffffff
+            }
+        }
+
+    </style>
+    
+</head>
+<body>
+
+    <div class="container mt-5">
+        <div class="row">
+            
+            <div class="col-12 p-3" id="qr-reader"></div>
+            <div class="col-12 p-3" id="qr-reader-results"></div>
+
+        </div>
+    </div>
+    
+    <!-- Javascript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/html5-qrcode.min.js"></script>
+    <script src="js/scanner.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#qr-reader__camera_permission_button').addClass("btn btn-primary");
+            $('#qr-reader__dashboard_section_swaplink').css({"cursor":"pointer","color":"green"});
+        });
+    </script>
+</body>
+</html>
